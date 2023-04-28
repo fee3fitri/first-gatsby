@@ -15,4 +15,11 @@ const AboutPage = () => {
 export default AboutPage
 
 // Add Gatsby Head API to add title to the HTML head
-export const Head = () => <title>About Page</title>
+export const Head = () => {
+  <>
+    <html lang="en" />
+    <body className="my-body-class" />
+    <title>About Page</title>
+    <meta name="description" content="Hello World" />
+  </>
+}
