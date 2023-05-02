@@ -21,9 +21,14 @@ const BlogPage = ({ data }) => {
 
 export const query = graphql `
   query {
-    allFile {
+    allMdx {
       nodes {
-        name
+        frontmatter {
+          title
+          date(formatString: "MMMM D, YYYY")
+        }
+        id
+        excerpt
       }
     }
   }

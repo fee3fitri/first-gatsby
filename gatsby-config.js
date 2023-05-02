@@ -10,14 +10,21 @@ module.exports = {
     "gatsby-plugin-sass",
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
+    "gatsby-plugin-mdx",
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: "gatsby-source-filesystem",
       options: {
         // The unique name for each instance
-        name: `blog`,
+        name: "blog",
         // Path to the directory
         path: `${__dirname}/blog`,
       },
-    }
+    },
+    {
+      resolve: "gatsby-plugin-page-creator",
+      options: {
+        path: `${__dirname}/blog`,
+      },
+    },
   ]
 };
